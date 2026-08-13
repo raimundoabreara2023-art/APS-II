@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="10.0" stylesheets="@Estilo.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.agenda_aniver.visao.MainController">
+    <children>
+        <Label text="Gerenciador de Aniversários" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        
+        <HBox spacing="10" alignment="CENTER">
+            <TextField fx:id="txtNome" promptText="Nome" prefWidth="150"/>
+            <TextField fx:id="txtDia" promptText="Dia" prefWidth="60"/>
+            <TextField fx:id="txtMes" promptText="Mês" prefWidth="60"/>
+        </HBox>
+        
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Cadastrar" onAction="#handleCadastrar"/>
+            <Button text="Alterar Selecionado" onAction="#handleAlterar"/>
+            <Button text="Remover Selecionado" onAction="#handleRemover"/>
+        </HBox>
+
+        <!-- Tabela para listar os aniversariantes -->
+        <TableView fx:id="tabelaAniversariantes" prefHeight="200" prefWidth="300" onMouseClicked="#handleSelecionarTabela">
+            <columns>
+                <TableColumn fx:id="colunaNome" text="Nome" prefWidth="180"/>
+                <TableColumn fx:id="colunaData" text="Data (Dia/Mês)" prefWidth="120"/>
+            </columns>
+        </TableView>
+        
+        <Label fx:id="lblMensagem" />
+    </children>
+</VBox>
