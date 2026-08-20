@@ -1,0 +1,55 @@
+/* Configuração global e fontes */
+.root {
+    -fx-font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    -fx-background-color: #f4f6f8;
+}
+
+/* Títulos */
+.label {
+    -fx-text-fill: #333333;
+}
+
+/* Campos de entrada e caixas de seleção */
+.text-field, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 6px;
+}
+
+.text-field:focused, .combo-box:focused {
+    -fx-border-color: #2196F3;
+    -fx-box-shadow: 0 0 3px rgba(33, 150, 243, 0.3);
+}
+
+/* Botão principal de cadastro */
+.button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 12px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.button:pressed {
+    -fx-background-color: #0D47A1;
+}
+
+/* Área de texto de listagem */
+.text-area {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.text-area .content {
+    -fx-background-color: #ffffff;
+}
