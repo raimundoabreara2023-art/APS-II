@@ -1,0 +1,46 @@
+/* Configuração global */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Rótulos */
+.label {
+    -fx-text-fill: #495057;
+    -fx-font-size: 13px;
+}
+
+/* Inputs */
+.text-field, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196F3;
+}
+
+/* Botões */
+.button {
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* Área de resultados */
+.text-area {
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.text-area .content {
+    -fx-background-color: #ffffff;
+}

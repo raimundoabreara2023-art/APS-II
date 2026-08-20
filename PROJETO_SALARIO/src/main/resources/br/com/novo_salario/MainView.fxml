@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" prefWidth="550" prefHeight="650" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.novo_salario.visao.MainController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Cálculo de Salário de Funcionários" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <Label text="Tipo:" prefWidth="120"/>
+        <ComboBox fx:id="cbTipoFuncionario" prefWidth="250" promptText="Selecione o Tipo"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Nome:" prefWidth="120"/>
+        <TextField fx:id="txtNome" promptText="Ex: Ana Costa" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Matrícula:" prefWidth="120"/>
+        <TextField fx:id="txtMatricula" promptText="Ex: F001" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Salário-Base:" prefWidth="120"/>
+        <TextField fx:id="txtSalarioBase" promptText="Ex: 2500.00" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Data Admissão:" prefWidth="120"/>
+        <TextField fx:id="txtDataAdmissao" promptText="Ex: 01/03/2020" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxVT" spacing="10" managed="false" visible="false">
+        <Label text="Vale Transporte:" prefWidth="120"/>
+        <TextField fx:id="txtVT" promptText="Ex: 220.00" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxVA" spacing="10" managed="false" visible="false">
+        <Label text="Vale Alimentação:" prefWidth="120"/>
+        <TextField fx:id="txtVA" promptText="Ex: 400.00" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxEquipe" spacing="10" managed="false" visible="false">
+        <Label text="Tamanho Equipe:" prefWidth="120"/>
+        <TextField fx:id="txtEquipe" promptText="Ex: 12" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxBonus" spacing="10" managed="false" visible="false">
+        <Label text="Percentual Bônus:" prefWidth="120"/>
+        <TextField fx:id="txtBonus" promptText="Ex: 0.20 (para 20%)" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxBolsa" spacing="10" managed="false" visible="false">
+        <Label text="Bolsa-Auxílio:" prefWidth="120"/>
+        <TextField fx:id="txtBolsa" promptText="Ex: 1500.00" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox fx:id="boxCarga" spacing="10" managed="false" visible="false">
+        <Label text="Carga Horária:" prefWidth="120"/>
+        <TextField fx:id="txtCarga" promptText="Ex: 20" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <Button text="Cadastrar e Calcular" fx:id="btnCadastrar" onAction="#handleCadastrar" prefWidth="Infinity"/>
+
+    <Button text="Carregar Dados de Exemplo (Lista)" fx:id="btnCarregarExemplos" onAction="#handleCarregarExemplos" prefWidth="Infinity"/>
+
+    <Label text="Funcionários Cadastrados:" style="-fx-font-weight: bold;"/>
+    <TextArea fx:id="txtAreaDetalhes" editable="false" VBox.vgrow="ALWAYS" />
+
+</VBox>
