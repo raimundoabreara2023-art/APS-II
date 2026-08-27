@@ -1,0 +1,42 @@
+/* Configuração global da tela */
+.root {
+    -fx-background-color: #f4f6f9;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* Título principal */
+#lblTitulo {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Estilo padrão para os botões */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-transition: background-color 0.3s;
+}
+
+/* Efeito ao passar o mouse por cima do botão */
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Efeito quando o botão é pressionado */
+.button:pressed {
+    -fx-background-color: #1f618d;
+}
+
+/* Rótulo de resultado */
+#lblResultado {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e;
+    -fx-font-style: italic;
+    -fx-padding: 10px;
+}
