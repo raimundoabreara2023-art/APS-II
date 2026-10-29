@@ -1,5 +1,17 @@
-package main.java.com.lagoa.model.patos;
+package com.lagoa.model.patos;
 
-public class RubberDuck {
-    
+import com.lagoa.model.quacks.Squeak;
+import com.lagoa.model.voos.FlyNoWay;
+
+public class RubberDuck extends Duck {
+
+    public RubberDuck() {
+        quackBehavior = new Squeak();
+        flyBehavior = new FlyNoWay();
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Eu sou um Pato de Borracha!");
+    }
 }
