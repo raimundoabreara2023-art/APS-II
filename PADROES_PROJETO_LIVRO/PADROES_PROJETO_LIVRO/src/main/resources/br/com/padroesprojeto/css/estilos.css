@@ -1,0 +1,86 @@
+
+.tela-principal {
+    -fx-background-color: #24150f;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.titulo {
+    -fx-text-fill: #f5d6a0;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.subtitulo {
+    -fx-text-fill: #d9a76c;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.painel {
+    -fx-background-color: #3b261c;
+    -fx-background-radius: 14px;
+    -fx-padding: 25px;
+    -fx-min-width: 480px;
+}
+
+.rotulo {
+    -fx-text-fill: #c9a98c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.estado {
+    -fx-text-fill: #f5d6a0;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.identidade {
+    -fx-text-fill: #e6c6a1;
+    -fx-font-size: 13px;
+}
+
+.botao {
+    -fx-background-color: #9b512e;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 18px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.botao:hover {
+    -fx-background-color: #c27645;
+}
+
+.botao-secundario {
+    -fx-background-color: #5c4030;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.botao-secundario:hover {
+    -fx-background-color: #79543c;
+}
+
+.painel-mensagem {
+    -fx-background-color: #342219;
+    -fx-background-radius: 10px;
+    -fx-padding: 18px;
+    -fx-min-width: 480px;
+}
+
+.mensagem {
+    -fx-text-fill: #f0dfca;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+}
+
+.rodape {
+    -fx-text-fill: #92745e;
+    -fx-font-size: 12px;
+}

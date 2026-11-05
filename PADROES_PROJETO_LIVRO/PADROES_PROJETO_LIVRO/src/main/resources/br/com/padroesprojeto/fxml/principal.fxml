@@ -1,0 +1,90 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.padroesprojeto.controller.CaldeiraController"
+            styleClass="tela-principal">
+
+    <center>
+        <VBox alignment="CENTER" spacing="22">
+
+            <padding>
+                <Insets top="30" right="35" bottom="30" left="35"/>
+            </padding>
+
+            <Label text="FÁBRICA DE CHOCOLATE"
+                   styleClass="titulo"/>
+
+            <Label text="CONTROLE DA CALDEIRA"
+                   styleClass="subtitulo"/>
+
+            <VBox alignment="CENTER" spacing="12"
+                  styleClass="painel">
+
+                <Label text="ESTADO ATUAL"
+                       styleClass="rotulo"/>
+
+                <Label fx:id="lblEstado"
+                       text="VAZIA"
+                       styleClass="estado"/>
+
+                <Label text="Identificação da instância"
+                       styleClass="rotulo"/>
+
+                <Label fx:id="lblIdentidade"
+                       text="Instância da caldeira"
+                       styleClass="identidade"/>
+
+            </VBox>
+
+            <Label text="OPERAÇÕES DA FÁBRICA"
+                   styleClass="subtitulo"/>
+
+            <HBox alignment="CENTER" spacing="12">
+
+                <Button text="Encher caldeira"
+                        onAction="#encherCaldeira"
+                        styleClass="botao"/>
+
+                <Button text="Aquecer chocolate"
+                        onAction="#aquecerChocolate"
+                        styleClass="botao"/>
+
+                <Button text="Retirar chocolate"
+                        onAction="#retirarChocolate"
+                        styleClass="botao"/>
+
+            </HBox>
+
+            <Button text="Consultar estado"
+                    onAction="#consultarEstado"
+                    styleClass="botao-secundario"/>
+
+            <VBox alignment="CENTER" spacing="8"
+                  styleClass="painel-mensagem">
+
+                <Label text="MENSAGEM DO SISTEMA"
+                       styleClass="rotulo"/>
+
+                <Label fx:id="lblMensagem"
+                       text="Sistema iniciado."
+                       wrapText="true"
+                       styleClass="mensagem"/>
+
+            </VBox>
+
+            <Label text="Demonstração do padrão de projeto SINGLETON"
+                   styleClass="rodape"/>
+
+        </VBox>
+    </center>
+
+</BorderPane>
