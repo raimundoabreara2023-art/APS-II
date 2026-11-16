@@ -1,0 +1,506 @@
+/* =====================================================
+   RESTAURANTE FACTORY
+   Identidade visual e componentes da interface
+   ===================================================== */
+
+/* CONFIGURAÇÕES GERAIS */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #f3f6f5;
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-text-fill: #1b2938;
+}
+
+/* =====================================================
+   TEMAS DOS CARDÁPIOS
+   ===================================================== */
+
+/* INICIAL (TELA DE ABERTURA - ANTES DA ESCOLHA) */
+
+.root.theme-inicial {
+    -fx-background-color: #eef3f7;
+}
+
+.theme-inicial .header-pane {
+    -fx-background-color: #ffffff;
+}
+
+.theme-inicial .sidebar-pane {
+    -fx-background-color: #e3ecf3;
+}
+
+.theme-inicial .app-title {
+    -fx-text-fill: #163172;
+}
+
+.theme-inicial .button-primary {
+    -fx-background-color: linear-gradient(to bottom, #1e56a0, #163172);
+}
+
+.theme-inicial .button-primary:hover {
+    -fx-background-color: #2769c2;
+}
+
+.theme-inicial .total-label {
+    -fx-text-fill: #163172;
+}
+
+.theme-inicial .item-price {
+    -fx-text-fill: #c86d19;
+    -fx-font-size: 16px;
+}
+
+.theme-inicial .motivational-card {
+    -fx-background-color: #d6e4f0;
+    -fx-border-color: #bdd3e6;
+    -fx-border-radius: 12px;
+}
+
+.theme-inicial .motivational-title {
+    -fx-text-fill: #163172;
+}
+
+.theme-inicial .quote-decoration {
+    -fx-text-fill: #d9822b;
+}
+
+/* VEGETARIANA - VERDE */
+
+.root.theme-vegetariana {
+    -fx-background-color: #f1f6f2;
+}
+
+.theme-vegetariana .header-pane {
+    -fx-background-color: #f9fcf9;
+}
+
+.theme-vegetariana .sidebar-pane {
+    -fx-background-color: #eaf2ec;
+}
+
+.theme-vegetariana .app-title {
+    -fx-text-fill: #183d22;
+}
+
+.theme-vegetariana .button-primary {
+    -fx-background-color: linear-gradient(to bottom, #398d3c, #155b25);
+}
+
+.theme-vegetariana .button-primary:hover {
+    -fx-background-color: #267b32;
+}
+
+.theme-vegetariana .total-label,
+.theme-vegetariana .item-price {
+    -fx-text-fill: #17632b;
+}
+
+.theme-vegetariana .motivational-card {
+    -fx-background-color: #dfedda;
+}
+
+.theme-vegetariana .banner-badge {
+    -fx-background-color: #215b27;
+}
+
+.theme-vegetariana .quote-decoration {
+    -fx-text-fill: #7bbd76;
+}
+
+.theme-vegetariana .banner-container {
+    -fx-background-color: linear-gradient(to bottom right, #3f9a45, #17541f);
+}
+
+/* FITNESS - AZUL */
+
+.root.theme-fitness {
+    -fx-background-color: #f0f6fc;
+}
+
+.theme-fitness .header-pane {
+    -fx-background-color: #f8fbff;
+}
+
+.theme-fitness .sidebar-pane {
+    -fx-background-color: #e4f0fa;
+}
+
+.theme-fitness .app-title {
+    -fx-text-fill: #102c59;
+}
+
+.theme-fitness .button-primary {
+    -fx-background-color: linear-gradient(to bottom, #258bd8, #0754a1);
+}
+
+.theme-fitness .button-primary:hover {
+    -fx-background-color: #126fc0;
+}
+
+.theme-fitness .total-label,
+.theme-fitness .item-price {
+    -fx-text-fill: #0862ad;
+}
+
+.theme-fitness .motivational-card {
+    -fx-background-color: #d9ebfa;
+}
+
+.theme-fitness .banner-badge {
+    -fx-background-color: #0755a5;
+}
+
+.theme-fitness .quote-decoration {
+    -fx-text-fill: #3299df;
+}
+
+.theme-fitness .banner-container {
+    -fx-background-color: linear-gradient(to bottom right, #2a8fd9, #0a4d96);
+}
+
+/* TRADICIONAL - VERMELHO */
+
+.root.theme-tradicional {
+    -fx-background-color: #faf3ee;
+}
+
+.theme-tradicional .header-pane {
+    -fx-background-color: #fffaf6;
+}
+
+.theme-tradicional .sidebar-pane {
+    -fx-background-color: #f5eae2;
+}
+
+.theme-tradicional .app-title {
+    -fx-text-fill: #581c13;
+}
+
+.theme-tradicional .button-primary {
+    -fx-background-color: linear-gradient(to bottom, #ad3e25, #731c0d);
+}
+
+.theme-tradicional .button-primary:hover {
+    -fx-background-color: #96321c;
+}
+
+.theme-tradicional .total-label,
+.theme-tradicional .item-price {
+    -fx-text-fill: #922a19;
+}
+
+.theme-tradicional .motivational-card {
+    -fx-background-color: #f2dfd1;
+}
+
+.theme-tradicional .banner-badge {
+    -fx-background-color: #842513;
+}
+
+.theme-tradicional .quote-decoration {
+    -fx-text-fill: #dc7752;
+}
+
+.theme-tradicional .banner-container {
+    -fx-background-color: linear-gradient(to bottom right, #b9482c, #6e190c);
+}
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
+.header-pane {
+    -fx-border-color: #dce3e7;
+    -fx-border-width: 0 0 1 0;
+}
+
+.header-icon {
+    -fx-font-size: 42px;
+}
+
+.app-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #172638;
+}
+
+.app-subtitle {
+    -fx-font-size: 17px;
+    -fx-text-fill: #52677b;
+}
+
+.header-feature {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #52677b;
+}
+
+/* =====================================================
+   PAINEL LATERAL
+   ===================================================== */
+
+.sidebar-pane {
+    -fx-background-radius: 17px;
+    -fx-background-insets: 8px;
+    -fx-border-radius: 17px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 12, 0, 0, 3);
+}
+
+.section-heading {
+    -fx-font-size: 19px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1b2938;
+}
+
+.sidebar-description {
+    -fx-font-size: 15px;
+    -fx-text-fill: #40566c;
+    -fx-line-spacing: 4px;
+}
+
+/* =====================================================
+   SELETOR DO CARDÁPIO
+   ===================================================== */
+
+.menu-combo {
+    -fx-background-color: white;
+    -fx-background-radius: 11px;
+    -fx-border-color: #d5dfe5;
+    -fx-border-radius: 11px;
+    -fx-border-width: 1.3px;
+    -fx-padding: 5px;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.menu-combo:hover {
+    -fx-border-color: #8da9bd;
+}
+
+.menu-combo .list-cell {
+    -fx-padding: 9px;
+    -fx-text-fill: #263849;
+}
+
+/* =====================================================
+   BOTÃO PRINCIPAL
+   ===================================================== */
+
+.button-primary {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.16), 9, 0, 0, 4);
+}
+
+.button-primary:pressed {
+    -fx-translate-y: 2px;
+    -fx-effect: none;
+}
+
+/* =====================================================
+   TOTAL DA REFEIÇÃO
+   ===================================================== */
+
+.total-section {
+    -fx-padding: 20px 0 15px 0;
+    -fx-border-color: #cbd7dc;
+    -fx-border-width: 1 0 0 0;
+}
+
+.total-label {
+    -fx-font-size: 37px;
+    -fx-font-weight: bold;
+    -fx-padding: 3px 0 0 12px;
+}
+
+/* =====================================================
+   CARTÃO MOTIVACIONAL
+   ===================================================== */
+
+.motivational-card {
+    -fx-background-radius: 12px;
+    -fx-padding: 17px;
+}
+
+.motivational-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+.motivational-description {
+    -fx-font-size: 15px;
+    -fx-text-fill: #40566c;
+    -fx-line-spacing: 4px;
+}
+
+/* =====================================================
+   FRASE MOTIVACIONAL
+   ===================================================== */
+
+.quote-label {
+    -fx-font-size: 20px;
+    -fx-font-style: italic;
+    -fx-text-fill: #20354a;
+    -fx-line-spacing: 5px;
+}
+
+.quote-decoration {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+}
+
+/* =====================================================
+   CONTEÚDO PRINCIPAL
+   ===================================================== */
+
+.main-content {
+    -fx-background-color: transparent;
+}
+
+/* =====================================================
+   BANNER PRINCIPAL
+   ===================================================== */
+
+.banner-container {
+    -fx-background-color: #dce7df;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.13), 12, 0, 0, 4);
+}
+
+.banner-text {
+    -fx-padding: 25px;
+}
+
+.banner-title {
+    -fx-font-size: 37px;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.banner-subtitle {
+    -fx-font-size: 26px;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+}
+
+.banner-badge {
+    -fx-background-color: rgba(22, 49, 114, 0.88);
+    -fx-background-radius: 50px;
+    -fx-padding: 16px 24px;
+    -fx-translate-x: -20px;
+    -fx-translate-y: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 10, 0, 0, 3);
+}
+
+.banner-badge-text {
+    -fx-font-size: 15px;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* =====================================================
+   CARTÕES DOS PRODUTOS
+   ===================================================== */
+
+.product-card {
+    -fx-background-color: white;
+    -fx-background-radius: 13px;
+    -fx-border-color: #dce5e8;
+    -fx-border-radius: 13px;
+    -fx-border-width: 1px;
+    -fx-padding: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 9, 0, 0, 3);
+}
+
+.product-card:hover {
+    -fx-border-color: #8da9bd;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 14, 0, 0, 5);
+}
+
+.theme-vegetariana .product-card {
+    -fx-background-color: #edf4ee;
+    -fx-border-color: #d2e3d4;
+}
+
+.theme-fitness .product-card {
+    -fx-background-color: #edf4fb;
+    -fx-border-color: #d4e5f5;
+}
+
+.theme-tradicional .product-card {
+    -fx-background-color: #f8eee7;
+    -fx-border-color: #ead8ca;
+}
+
+.product-image-placeholder {
+    -fx-background-color: #e4e9e6;
+    -fx-background-radius: 10px;
+}
+
+.product-placeholder-icon {
+    -fx-font-size: 38px;
+}
+
+.product-category {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #163172;
+    -fx-background-color: #dce7f2;
+    -fx-background-radius: 6px;
+    -fx-padding: 4px 10px;
+}
+
+.item-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f1c2e;
+    -fx-wrap-text: true;
+}
+
+.item-price {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+}
+
+.item-description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50;
+    -fx-wrap-text: true;
+    -fx-line-spacing: 3px;
+}
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+
+.footer-pane {
+    -fx-background-color: #e9eff2;
+    -fx-border-color: #d5dfe4;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-icon {
+    -fx-font-size: 21px;
+}
+
+.footer-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #536779;
+}
+
+.footer-message {
+    -fx-font-size: 14px;
+    -fx-font-style: italic;
+    -fx-text-fill: #536779;
+}

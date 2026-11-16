@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="rootPane"
+            prefHeight="1000.0"
+            prefWidth="1500.0"
+            minHeight="850.0"
+            minWidth="1200.0"
+            styleClass="root theme-inicial"
+            stylesheets="@../../css/estilos.css"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="br.com.restaurantefactory.presentation.controller.RestauranteController">
+
+    <!-- CABEÇALHO -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="25.0" styleClass="header-pane">
+            <padding>
+                <Insets top="18" right="35" bottom="18" left="35"/>
+            </padding>
+
+            <Label text="👨‍🍳" styleClass="header-icon"/>
+
+            <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+                <Label text="Restaurante Factory" styleClass="app-title"/>
+                <Label text="Monte refeições utilizando o padrão Abstract Factory"
+                       styleClass="app-subtitle"/>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="35.0">
+                <VBox alignment="CENTER_LEFT">
+                    <Label text="🍴 Comida de" styleClass="header-feature"/>
+                    <Label text="qualidade" styleClass="header-feature"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT">
+                    <Label text="🌿 Opções para" styleClass="header-feature"/>
+                    <Label text="todos os estilos" styleClass="header-feature"/>
+                </VBox>
+                <VBox alignment="CENTER_LEFT">
+                    <Label text="♥ Sabor que" styleClass="header-feature"/>
+                    <Label text="faz a diferença" styleClass="header-feature"/>
+                </VBox>
+            </HBox>
+        </HBox>
+    </top>
+
+    <!-- PAINEL LATERAL -->
+    <left>
+        <VBox spacing="22.0" prefWidth="365.0" styleClass="sidebar-pane">
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <VBox spacing="14.0">
+                <Label text="🍴  Escolha o Cardápio" styleClass="section-heading"/>
+
+                <ComboBox fx:id="comboTipoCardapio"
+                          maxWidth="Infinity"
+                          prefHeight="58.0"
+                          promptText="Selecione o estilo..."
+                          styleClass="menu-combo"/>
+
+                <Label text="Refeições saborosas, nutritivas e feitas com ingredientes frescos."
+                       wrapText="true"
+                       styleClass="sidebar-description"/>
+            </VBox>
+
+            <Button fx:id="btnMontar"
+                    mnemonicParsing="false"
+                    onAction="#onMontarRefeicaoClick"
+                    maxWidth="Infinity"
+                    prefHeight="65.0"
+                    text="🍴  Montar Refeição"
+                    styleClass="button-primary"/>
+
+            <VBox spacing="12.0" styleClass="total-section">
+                <Label text="◆  Total da Refeição" styleClass="section-heading"/>
+                <Label fx:id="lblValorTotal" text="R$ 0,00" styleClass="total-label"/>
+            </VBox>
+
+            <VBox spacing="10.0" styleClass="motivational-card">
+                <Label text="🌿  Alimentação consciente" styleClass="motivational-title"/>
+                <Label text="Escolha o que faz bem para você e para o planeta!"
+                       wrapText="true"
+                       styleClass="motivational-description"/>
+            </VBox>
+
+            <VBox spacing="10.0" alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                <Label text="“Boa comida transforma dias comuns em momentos especiais.”"
+                       wrapText="true"
+                       styleClass="quote-label"/>
+                <Label text="━━━━━━━━━━━━" styleClass="quote-decoration"/>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- ÁREA PRINCIPAL -->
+    <center>
+        <VBox spacing="15.0" styleClass="main-content">
+            <padding>
+                <Insets top="18" right="22" bottom="18" left="22"/>
+            </padding>
+
+            <!-- BANNER: responsivo via binding no controller (sem prefHeight fixo) -->
+            <StackPane fx:id="painelBanner"
+                       styleClass="banner-container">
+
+                <ImageView fx:id="imgRefeicao" preserveRatio="false" smooth="true"/>
+
+                <VBox fx:id="bannerApresentacao"
+                      alignment="CENTER_LEFT"
+                      StackPane.alignment="CENTER_LEFT"
+                      maxWidth="350.0"
+                      maxHeight="-Infinity"
+                      styleClass="banner-text">
+                    <Label text="Sabor e equilíbrio" wrapText="true" styleClass="banner-title"/>
+                    <Label text="em cada detalhe" styleClass="banner-subtitle"/>
+                </VBox>
+
+                <!-- maxWidth/maxHeight = USE_PREF_SIZE evita o "oval gigante" azul -->
+                <VBox fx:id="bannerBadge"
+                      alignment="CENTER"
+                      StackPane.alignment="TOP_RIGHT"
+                      maxWidth="-Infinity"
+                      maxHeight="-Infinity"
+                      styleClass="banner-badge">
+                    <Label text="Escolhas melhores" styleClass="banner-badge-text"/>
+                    <Label text="para um amanhã" styleClass="banner-badge-text"/>
+                    <Label text="mais saudável" styleClass="banner-badge-text"/>
+                </VBox>
+            </StackPane>
+
+            <!-- CARTÕES DOS PRODUTOS (largura igual: prefWidth=1 + hgrow) -->
+            <HBox spacing="15.0" VBox.vgrow="ALWAYS" alignment="TOP_CENTER">
+
+                <!-- PRATO PRINCIPAL / FITNESS -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" prefWidth="1.0" styleClass="product-card">
+                    <StackPane prefHeight="120.0" minHeight="120.0" maxHeight="120.0"
+                               styleClass="product-image-placeholder">
+                        <Label fx:id="iconePrato" text="🍽️" styleClass="product-placeholder-icon"/>
+                        <ImageView fx:id="imgPrato" fitHeight="120.0" preserveRatio="true" smooth="true"/>
+                    </StackPane>
+                    <Label fx:id="lblCat1" text="Fitness" styleClass="product-category"/>
+                    <Label fx:id="lblPratoNome" text="[Aguardando]" wrapText="true" styleClass="item-title"/>
+                    <Label fx:id="lblPratoPreco" text="R$ 0,00" styleClass="item-price"/>
+                    <Label fx:id="lblPratoDesc" text="Descrição do prato..." wrapText="true"
+                           styleClass="item-description"/>
+                </VBox>
+
+                <!-- BEBIDA / TRADICIONAL -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" prefWidth="1.0" styleClass="product-card">
+                    <StackPane prefHeight="120.0" minHeight="120.0" maxHeight="120.0"
+                               styleClass="product-image-placeholder">
+                        <Label fx:id="iconeBebida" text="🥤" styleClass="product-placeholder-icon"/>
+                        <ImageView fx:id="imgBebida" fitHeight="120.0" preserveRatio="true" smooth="true"/>
+                    </StackPane>
+                    <Label fx:id="lblCat2" text="Tradicional" styleClass="product-category"/>
+                    <Label fx:id="lblBebidaNome" text="[Aguardando]" wrapText="true" styleClass="item-title"/>
+                    <Label fx:id="lblBebidaPreco" text="R$ 0,00" styleClass="item-price"/>
+                    <Label fx:id="lblBebidaDesc" text="Descrição da bebida..." wrapText="true"
+                           styleClass="item-description"/>
+                </VBox>
+
+                <!-- SOBREMESA / VEGETARIANO -->
+                <VBox spacing="8.0" HBox.hgrow="ALWAYS" prefWidth="1.0" styleClass="product-card">
+                    <StackPane prefHeight="120.0" minHeight="120.0" maxHeight="120.0"
+                               styleClass="product-image-placeholder">
+                        <Label fx:id="iconeSobremesa" text="🍰" styleClass="product-placeholder-icon"/>
+                        <ImageView fx:id="imgSobremesa" fitHeight="120.0" preserveRatio="true" smooth="true"/>
+                    </StackPane>
+                    <Label fx:id="lblCat3" text="Vegetariano" styleClass="product-category"/>
+                    <Label fx:id="lblSobremesaNome" text="[Aguardando]" wrapText="true" styleClass="item-title"/>
+                    <Label fx:id="lblSobremesaPreco" text="R$ 0,00" styleClass="item-price"/>
+                    <Label fx:id="lblSobremesaDesc" text="Descrição da sobremesa..." wrapText="true"
+                           styleClass="item-description"/>
+                </VBox>
+
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- RODAPÉ -->
+    <bottom>
+        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="footer-pane">
+            <padding>
+                <Insets top="15" right="25" bottom="15" left="25"/>
+            </padding>
+
+            <Label text="🍴" styleClass="footer-icon"/>
+            <Label text="Restaurante Factory" styleClass="footer-text"/>
+            <Label text="|" styleClass="footer-text"/>
+            <Label text="Padrão de Projeto: Abstract Factory" styleClass="footer-text"/>
+
+            <VBox HBox.hgrow="ALWAYS"/>
+
+            <Label text="🌿  Mais que refeições, boas escolhas." styleClass="footer-message"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
